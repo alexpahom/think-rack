@@ -34,6 +34,6 @@ class TimeService
 
   def validate_format(params)
     format_errors = params.reject { |f| TIME_FORMATS.key? f }
-    @errors << "Unknown arguments: #{format_errors}" unless format_errors.empty?
+    @errors << "Unknown time format #{format_errors}" unless format_errors.empty?
   end
 end
